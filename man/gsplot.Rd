@@ -9,7 +9,7 @@
 gsplot(x = NULL, ...)
 
 \method{gsplot}{default}(..., created = Sys.Date(),
-  gsplot.version = packageDescription("gsplot", fields = "Version"),
+  gsplot.version = packageDescription(getPackageName(), fields = "Version"),
   config.file = NA, theme = NA, frame.plot = TRUE)
 
 \method{gsplot}{list}(x)

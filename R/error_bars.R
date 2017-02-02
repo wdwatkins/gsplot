@@ -44,9 +44,13 @@ error_bar <- function(object, ...) {
   override("gsplot", "error_bar", object, ...)
 }
 
-
 error_bar.gsplot <- function(object, x, y, y.high=0, y.low=0, x.high=0, x.low=0, 
                              epsilon=0.1, ..., legend.name=NULL, side=c(1,2)){
+  
+  to.gsplot <- set_args("error_bar", ...,
+                           custom.config =  object[["global"]][["config"]][["config.file"]],
+                          package = "gsplot")
+  object$view.1.2$arrows <- append_replace(object$global$config, to.gsplot)
   
   y.high[is.na(y.high)] <- 0
   y.low[is.na(y.low)] <- 0

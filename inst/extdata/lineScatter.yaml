@@ -28,7 +28,7 @@ axis:
   outer: FALSE
   las: 1
   lwd: 0.8
-title: NULL
+title: "Test title"
 text: NULL
 mtext: 
   las: 0
@@ -42,7 +42,9 @@ error_bar:
   y.low: 0 
   x.high: 0
   x.low: 0
-  epsilon: 0.1
+  epsilon: 0.01
+  lwd: 3
+  col: 'green'
 arrows: NULL
 callouts:
   col: 'black'
